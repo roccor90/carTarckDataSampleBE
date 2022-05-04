@@ -1,0 +1,31 @@
+PREREQUISITES
+- mongo DB
+- Eclipse or Spring Tool Suite
+- visual studio code
+- postman
+- download code from github https://github.com/roccor90/carTrackDataSample.git
+
+Use this reference for more info:
+
+Reference
+-https://www.devglan.com/spring-boot/spring-boot-mongodb-configuration
+-https://spring.io/guides/gs/accessing-data-mongodb/#initial
+-https://docs.spring.io/spring-data/mongodb/docs/1.2.0.RELEASE/reference/html/mongo.core.html
+
+STEP TO FOLLOW FOR INSTALLATION:	
+1) Open Eclipse or STS and import Maven Proget (track-data-ms)
+2) Build and launch as spring boot application
+3) Check if is run on port 8080:
+	a) Open postman 
+	b) import TrackMsSampleCollection.postman_collection.json
+	c) use collection SAVE TRACK DATA FROM CSV to import fake data into you local mongo db
+	d) try other rest API to read data
+4) open VS Code
+5) open folder track-data-fe
+6) launch npm install
+7) launch ng serve to run frontend application
+8) go to browser localhost:4200
+	
+
+
+

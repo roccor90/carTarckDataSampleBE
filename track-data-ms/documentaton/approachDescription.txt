@@ -1,0 +1,28 @@
+INTERAZIONE UTENTE
+I sensori a bordo delle auto chiamano attraverso una API Rest il servizio su BE per collezionare i dati su un DB.
+Un utente test engineer accede all'pllicativo front end e visualizza in tempo reale le informazioni provvenienti dai sensori 
+installati a bordo delle 3 auto di riferimento scelte.
+Nel frontend l'utente può filtrare i dati paginati e può selezionare i dati da inviare al motore di AI.
+
+ARCHITETTURA E SCELTE TECNOLOGICHE
+Per lo svolgimento dell'esercitazione ho pensato di realizzare un microservizio spring boot che espone delle API REST
+utili al sistema per collezionare e reperire dati.
+Per collezionare dati ho pensato di utilizzare un db nosql (mongo db) poichè i database NoSQL sono una soluzione ideale 
+per molte applicazioni che richiedono database flessibili, scalabili, con prestazioni elevate ed altamente funzionali.
+Per la parte frontend ho realizzato una applicazione Angular che raggruppa i dati per veicolo e mostra in tabella le informazioni in 
+tempo reale che arrivano dal server a scaglioni di tempo di 5 minuti.
+Ho utilizzato angular perchè l'applicazione nasce come un applicazione di tipo enterprise su architettura a microservizi basata su API REST.
+La scelta di un framework è data dalla volontà di voler far seguire ai diversi team di sviluppo le stesse modalità di lavoro, inoltre Angular 
+attraverso la sua architettura modulare consente di strutturare al meglio un'applicazione e permette di semplificare il processo di 
+creazione di SPA (Single page application).
+Inoltre in ottica di espansioni future dell'applicazione è possibile utilizzare attraverso il meccaniscmo della module federation e dynamic loading 
+di Angular la possibilità di suddividere la parte frontend in micro frontend riutiulizzabili in altre applicazioni.
+
+LIMITAZIONI DELLA SOLUZIONE ATTUALE.
+1) Lavora su un set di dati statico
+2) I servizi Rest non sono protetti ma esprosti all'esterno
+3) Manca un meccanismo di autenticazione
+4) Andrebbe realizzato un MS apposito per il machine learning e le predizioni
+
+
+

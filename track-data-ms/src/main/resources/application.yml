@@ -1,0 +1,10 @@
+spring:
+  data:
+    mongodb:
+      authentication-database: admin
+      uri: mongodb://root:root@localhost:27017/trackdata_db
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 200MB
+      max-request-size: 200MB

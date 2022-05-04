@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "1876c0fc-0936-4f96-bfc3-c06b5686784a",
+		"name": "TrackMsSampleCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET TRACK OF A CARID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/track/Volvo V40",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"track",
+						"Volvo V40"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SAVE TRACK DATA",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pressure\": 2.54999995232,\r\n    \"position\": \"Front Left\",\r\n    \"temperature\": 9.0,\r\n    \"omega\": 45.4199999641,\r\n    \"speed\": 51.0111111535,\r\n    \"carId\": \"Volvo V40\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/track",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"track"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET TRACK DATA FROM SUBSET CARID",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\"Seat Leon\", \"Audi A3\"]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/track/subsetCarId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"track",
+						"subsetCarId"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SAVE TRACK DATA FROM CSV",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/rrana/Desktop/test.csv"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/track/upload-csv-file",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"track",
+						"upload-csv-file"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
