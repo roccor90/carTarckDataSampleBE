@@ -3,14 +3,15 @@ PREREQUISITES
 - Eclipse or Spring Tool Suite
 - visual studio code
 - postman
-- download code from github https://github.com/roccor90/carTrackDataSample.git
+- download code:
+	BACKEND: https://github.com/roccor90/carTarckDataSampleBE.git
+	FRONTEND: github https://github.com/roccor90/carTrackDataSample.git
 
 Use this reference for more info:
-
-Reference
--https://www.devglan.com/spring-boot/spring-boot-mongodb-configuration
--https://spring.io/guides/gs/accessing-data-mongodb/#initial
--https://docs.spring.io/spring-data/mongodb/docs/1.2.0.RELEASE/reference/html/mongo.core.html
+	Reference
+	-https://www.devglan.com/spring-boot/spring-boot-mongodb-configuration
+	-https://spring.io/guides/gs/accessing-data-mongodb/#initial
+	-https://docs.spring.io/spring-data/mongodb/docs/1.2.0.RELEASE/reference/html/mongo.core.html
 
 STEP TO FOLLOW FOR INSTALLATION:	
 1) Open Eclipse or STS and import Maven Proget (track-data-ms)
@@ -25,6 +26,8 @@ STEP TO FOLLOW FOR INSTALLATION:
 6) launch npm install
 7) launch ng serve to run frontend application
 8) go to browser localhost:4200
+
+9) To try prediction class open BayesianPrediction.java from eclipse and lauch as java application.
 	
 
 

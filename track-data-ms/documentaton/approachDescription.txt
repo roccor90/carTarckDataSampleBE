@@ -1,6 +1,6 @@
 INTERAZIONE UTENTE
 I sensori a bordo delle auto chiamano attraverso una API Rest il servizio su BE per collezionare i dati su un DB.
-Un utente test engineer accede all'pllicativo front end e visualizza in tempo reale le informazioni provvenienti dai sensori 
+Un utente test engineer accede all'apllicativo front end e visualizza in tempo reale le informazioni provvenienti dai sensori 
 installati a bordo delle 3 auto di riferimento scelte.
 Nel frontend l'utente può filtrare i dati paginati e può selezionare i dati da inviare al motore di AI.
 
@@ -15,8 +15,15 @@ Ho utilizzato angular perchè l'applicazione nasce come un applicazione di tipo 
 La scelta di un framework è data dalla volontà di voler far seguire ai diversi team di sviluppo le stesse modalità di lavoro, inoltre Angular 
 attraverso la sua architettura modulare consente di strutturare al meglio un'applicazione e permette di semplificare il processo di 
 creazione di SPA (Single page application).
-Inoltre in ottica di espansioni future dell'applicazione è possibile utilizzare attraverso il meccaniscmo della module federation e dynamic loading 
+Inoltre in ottica di espansioni future dell'applicazione è possibile utilizzare attraverso il meccanismo della module federation e dynamic loading 
 di Angular la possibilità di suddividere la parte frontend in micro frontend riutiulizzabili in altre applicazioni.
+
+Per la parte di datamining e predizione non essendo ben specificato nella traccia ho ipotizzato la realizzazione di una semplice classe main 
+che partendo dal dataset di training fornito e semplificato (documentation/test_csv) per rendere più veloce l'elaborazione, verifica se un 
+dato di input è la predizione di quel determinato veicolo specificato (car_id) oppure no.
+Per la predizione ho utilizzato il modello bayesiano.
+La classificazione bayesiana utilizza il teorema di Bayes per prevedere il verificarsi di qualsiasi evento basandosi sul calcolo delle probabilità
+
 
 LIMITAZIONI DELLA SOLUZIONE ATTUALE.
 1) Lavora su un set di dati statico
